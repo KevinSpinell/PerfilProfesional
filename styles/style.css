@@ -166,14 +166,16 @@ body{
 /* testimony */
 
 .testimony{
-    background-color: #e5e5f7;
+    background-color: #ffffff;
 }
+
 .testimony_container{
     display: grid;
-    grid-template-columns: 50x 1fr 50px;
+    grid-template-columns: 50px 1fr 50px;
     gap: 1em;
     align-items: center;
 }
+
 .testimony_body{
     display: grid;
     grid-template-columns: 1fr max-content;
@@ -185,31 +187,35 @@ body{
     opacity: 0;
     pointer-events: none;
 }
+
 .testimony_body--show{
     pointer-events: unset;
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
-
 }
+
 .testimony_img{
     width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    object-fit: 50% 30%;
+    object-position: 50% 30%;
 }
+
 .testimony_texts{
     max-width: 700px;
 }
+
 .testimony_course{
-    background-color: royalblue;
+    background-color: rgb(129, 155, 232);
     color: #fff;
     display: inline-block;
     padding: 5px;
 }
+
 .testimony_arrow{
     width: 90%;
-    cursor: pointer;
+    cursor: pointer;
 }
 
 /* footer */
