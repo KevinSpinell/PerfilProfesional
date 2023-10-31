@@ -45,12 +45,13 @@ let boolean = true;
 let array_num = [1,2,3,4,5];
 let array_str = ['Lunes','Martes','Miercoles','Jueves','Viernes'];
 let array_mix = [1.4,'a',true];
-let array_multidimensional = [
-    {name:Kevin ,last_name: Carrascal , age:16 },
-    {name:Luisa ,last_name:Morantes , age:17 },
-    {name:Nalli ,last_name:Mawi , age:15 },
-    {name:Fernanda ,last_name:xd , age:20 }
-]
+// let array_multidimensional = [
+//   {name:Kevin ,last_name: Carrascal , age:16 },
+//   {name:Luisa ,last_name:Morantes , age:17 },
+//   {name:Nalli ,last_name:Mawi , age:15 },
+//   {name:Fernanda ,last_name:xd , age:20 }
+// ]
+
 
 // OPERADORES 
 //Suma 
@@ -64,3 +65,86 @@ var div = number_one / number_two;
 div = div.toFixed(2)
 //Modulo
 var mod = number_one % number_two
+
+
+
+// OPERADORES LOGICOS Y ESTRUCTURAS CONDICIONALES  
+
+//AND && con if
+var bool = false;
+var numeric = 5;
+if(!bool){
+  console.log("ingresa al if "+bool);
+}
+else{
+  console.log("ingresa al else "+bool)
+}
+
+// OR || con if
+var age = 16;
+if(age >=18 || numeric==5){
+    console.log("Ingresa if")
+    age++
+}
+else{
+  console.log("age")
+  age--
+}
+console.log(age)
+
+
+// FOR
+for(let i = 0; i<array_str.length; i++){
+  console.log(array_str[i]+ (i+1));
+}
+
+// While
+ var j = 0;
+ while(j<array_str.length){
+   console.log(array_str[j])
+   j++
+ }
+
+// DO WHILE
+var f = 0;
+do{
+  console.log(array_str[f])
+  f++
+}while(f<array_str.length)
+
+// EVENTOS
+ // CREAR FUNCIONES
+ function load_page(){
+   alert("Bievenido a mi sitio web")
+ }
+ function change_color(){
+   document.body.style.backgroundColor = "red"
+   document.body.style.color = "#fff"
+ }
+  const btn_clear = document.querySelector("#limpiar")
+  btn_clear.clear.addEventListener("click", ()=> {
+    document.body.style.backgroundColor = "white"
+    document.body.style.color = "#000"
+  });
+
+
+  // FORMULARIO DE REGISTRO
+  const form_register = document.getElementById("form_register")
+  const nombres = document.getElementById("nombres")
+  const apellidos = document.getElementById("npellidos")
+  const validation = document.getElementById("validation")
+
+  form_register.addEventListener("submit", event_name => {
+      event_name.preventDefault(); 
+      let info = "";
+      if(nombres.value.length <= 2 || apellidos.value.length <= 2){
+          info += "Nombres y/o apellidos deben ser mayores a 2 letras"
+          validation.style.color="red"
+      }
+      else{
+          alert(nombres +""+apellidos)
+          nombres.style.backgroundColor ="green"
+          apellidos.style.backgroundColor ="green"
+      }
+      validation.innerText= info;
+  })
