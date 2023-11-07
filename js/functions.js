@@ -45,12 +45,12 @@ let boolean = true;
 let array_num = [1,2,3,4,5];
 let array_str = ['Lunes','Martes','Miercoles','Jueves','Viernes'];
 let array_mix = [1.4,'a',true];
-// let array_multidimensional = [
-//   {name:Kevin ,last_name: Carrascal , age:16 },
-//   {name:Luisa ,last_name:Morantes , age:17 },
-//   {name:Nalli ,last_name:Mawi , age:15 },
-//   {name:Fernanda ,last_name:xd , age:20 }
-// ]
+let array_multidimensional = [
+   {name:"Kevin" ,last_name: "Carrascal" , age:"16" },
+   {name:"Luisa" ,last_name:"Morantes" , age:"17" },
+   {name:"Nalli" ,last_name:"Mawi" , age:"15" },
+   {name:"Fernanda" ,last_name:"xd" , age:"20" }
+  ]
 
 
 // OPERADORES 
@@ -122,7 +122,7 @@ do{
    document.body.style.color = "#fff"
  }
   const btn_clear = document.querySelector("#limpiar")
-  btn_clear.clear.addEventListener("click", ()=> {
+  btn_clear.addEventListener("click", ()=> {
     document.body.style.backgroundColor = "white"
     document.body.style.color = "#000"
   });
@@ -131,7 +131,7 @@ do{
   // FORMULARIO DE REGISTRO
   const form_register = document.getElementById("form_register")
   const nombres = document.getElementById("nombres")
-  const apellidos = document.getElementById("npellidos")
+  const apellidos = document.getElementById("apellidos")
   const validation = document.getElementById("validation")
 
   form_register.addEventListener("submit", event_name => {
@@ -148,3 +148,26 @@ do{
       }
       validation.innerText= info;
   })
+  function load_page(){
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled = true;
+    let date = new Date();
+    console.log(date.getFullYear())
+
+    for(let a = 0; a<array_str.length; a++){
+      console.log(array_mul[a].name)
+    }
+  }
+  function validate(){
+    alert("Funciona")
+    let nombre = document.getElementById("nombres").value
+    console.log(nombre.length)
+    if(nombres.length<2){
+      document.getElementById("apellidos").value
+      document.getElementById("apellidos").value
+      alert(nombres.toLowerCase())
+      alert(nombres.concat("Carrascal"))
+    }
+  }
+  // Pegar la funcion de whats
+
