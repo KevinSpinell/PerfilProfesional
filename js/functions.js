@@ -170,4 +170,13 @@ do{
     }
   }
   // Pegar la funcion de whats
-
+  let table = document.querySelector('.puntos tbody')
+  let row = table.insertRow(0)
+  let cell1 = row.insertCell(0)
+  let cell2 = row.insertCell(1)
+  let cell3 = row.insertCell(2)
+  let cell4 = row.insertCell(3)
+  cell1.innerHTML= nombre
+  cell2.innerText= apellido
+  cell3.innerHTML= number
+  cell4.innerHTML= correo
